@@ -5,13 +5,22 @@
 // Update the inventory mapping when items change
 game.on("inventory", updateInventoryItemIndices);
 
-game.on("chat", data => {
-    if (data.channel !== "party" || !CONFIG.partyMembers.includes(data.name)) return;
-    if (data.message.includes("potion run") && data.name !== character.name) {
-        isRestocking = true;
-        atDestination = false;
-        set_message(`${data.name} needs potions, going to restock`);
-        restockPotions();
+game.on("chat", function(data) {
+    // Log the message, using `data.from` as the sender name
+    if (data.from) {
+        game_log(`Received chat from ${data.from}: ${data.message}`);
+    } else {
+        game_log(`Received chat with no sender: ${data.message}`);
+    }
+
+    // Existing functionality for handling party messages
+    if (CONFIG.partyMembers.includes(data.from)) {
+        if (data.message.includes("potion run") && data.from !== character.name) {
+            isRestocking = true;
+            atDestination = false;
+            set_message(`${data.from} needs potions, going to restock`);
+            restockPotions();
+        }
     }
 });
 
