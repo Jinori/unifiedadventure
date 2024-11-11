@@ -52,8 +52,8 @@ Edit config.js
 
 // config.js
 
-// Configuration Constants
-const CONFIG = {
+    Configuration Constants
+    const CONFIG = {
     warriorName: "Jinori", // Change to your Warrior's name
     partyLeader: "Jinori",  // The character who will be the party leader
     followDistance: 100,    // Distance at which characters will follow the leader
@@ -97,9 +97,9 @@ const CONFIG = {
         { name: "Beginner Zone", map: "main", x: 38, y: 773, level: 1, target: "goo" },
         // Add or adjust zones as needed
     ],
-};
+    };
 
-    Update Character Names:
+ Update Character Names:
         Replace "Jinori", "Nizzi", and "Kalai" with your actual character names.
     Adjust Zones:
         Modify the zones to fit your leveling strategy.
@@ -108,17 +108,6 @@ const CONFIG = {
     Set Party Leader:
         Choose one character to be the party leader.
 
-Edit SLOT_TYPES (if necessary)
-
-// Slot Types Mapping
-const SLOT_TYPES = {
-    helmet: "helmet",
-    chest: "chest",
-    gloves: "gloves",
-    // ...
-};
-
-    Usually, you don't need to modify this unless you have custom gear slots.
 
 Usage
 
