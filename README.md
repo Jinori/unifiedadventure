@@ -1,4 +1,4 @@
-Adventure Land Party Bot Scripts
+Adventure Land Party Bot Scripts : WORK IN PROGRESS
 
 Welcome to the Adventure Land Party Bot Scripts! This collection of modular scripts is designed to automate and coordinate a party of characters in the MMORPG Adventure Land. The scripts allow characters to form parties, navigate the game world, combat monsters, restock supplies, and support each other efficiently.
 
