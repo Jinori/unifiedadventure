@@ -5,7 +5,7 @@ const CONFIG = {
     warriorName: "Jinori",
     partyLeader: "Jinori",
     followDistance: 100,
-    healthThreshold: { priest: 0.85, paladin: 0.5, warrior: 0.2 },
+    healthThreshold: { priest: 0.85, paladin: 0.5, warrior: 0.7 },
     manaThreshold: { priest: 0.5, paladin: 0.7, warrior: 0.5 },
     potionThreshold: 30,
     maxPotions: { hpot0: 1000, mpot0: 1000 },
@@ -30,7 +30,7 @@ const CONFIG = {
         { name: "Squig Zone", map: "main", x: -1180, y: 383, level: 42, target: "squig" },
         { name: "Pizio Zone", map: "main", x: -105, y: 1464, level: 50, target: "poisio" },
     ],
-	bosses: ["phoenix", "greenjr", "mvampire", "snowman", "franky", "grinch"],
+	bosses: ["snowman"],
     minimumBossLevel: 55, // Minimum level to engage bosses
 };
 
@@ -48,4 +48,7 @@ const SLOT_TYPES = {
     amulet: "amulet",
 };
 
+const zoneMoveRetryInterval = 5000; // Minimum time between zone movement attempts
+const smartMoveTimeout = 10000;  // Timeout for smart_move in ms (10 seconds)
+const moveRetryInterval = 5000;  // Minimum time in ms between movement retries
 const partyCheckInterval = 5000;
